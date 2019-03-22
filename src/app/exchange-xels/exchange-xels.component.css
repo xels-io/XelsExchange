@@ -1,0 +1,9 @@
+.form-control
+{border: 1px solid black;
+    border-radius: 30px;
+    padding: 6px 20px;
+    background: transparent;
+    font-family: "OpenSans";
+    font-size: 20px;
+    height: 50px;
+}

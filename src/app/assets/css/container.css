@@ -1,0 +1,24 @@
+.ui.text.container {
+    padding-bottom: 5%;
+}
+.ui.cards
+{
+    padding-bottom: 2%;
+   
+
+}
+.ui.cards>.card{
+    max-height : 150px;
+    max-width : 212px;
+}
+.card table .coin-card{
+    
+    background-color: red;
+}
+.coin-card
+{
+    float:right;
+    min-width: 200px;
+    min-height: 200px;
+    border-color: grey;
+}

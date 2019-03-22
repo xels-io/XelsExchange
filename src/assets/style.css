@@ -1,0 +1,312 @@
+@import "header.css";
+@import "hero.css";
+@import "currency.css";
+@import "transaction.css";
+/*@import "form_group.css";*/
+@import "currency_list_header.css";
+@import "currency_live.css";
+@import "feature.css";
+@import "team.css";
+@import "contact.css";
+@import "compare.css";
+@import "check_animate.css";
+@import "payment.css";
+
+.alert-msg{
+    background-color: #f7921a;
+    color: white;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px -6px 20px 4px #965100;
+    transition: height 1s;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: initial;
+}
+.alert-msg-out{
+    padding: 0px;
+    top: -1px;
+}
+
+.parent-width{
+    width: 70% !important;
+}
+.center{
+    text-align: center;
+}
+.left{
+    text-align: left;
+}
+.diposit,.receive{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 1px solid #dfe1e2;
+    min-height: 30px;
+}
+.send{
+    padding: 30px;
+    margin: 40px;
+    font: 24px;
+}
+.refund-option{
+    background-color: whitesmoke;
+    border: 1px solid #dfe1e2;
+    padding: 20px;
+}
+
+.red{
+    color: red;
+}
+.green{
+    color:green;
+}
+.bg-whitesmoke{
+    background-color: whitesmoke;
+}
+.exchange-deposit{
+    /*    padding: 30px;
+        background: #123356;*/
+    color:white;
+}
+/*ALL page*/
+.theme-heading {
+    color: #253852;
+    display: inline;
+    font-family: Roboto-Light;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 2px;
+}
+/*recent order*/
+.recent-order{
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 20px 0 50px 0;
+    background-image: url(../img/recent-orders-bg.png);
+    background-position: center bottom;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: left;
+    /*margin: 40px 0 100px 4px;*/
+}
+.recent-order .theme-heading {
+    margin-bottom: 20px;
+}
+.recent-order .fa.fa-arrow-right {
+    color: #959595;
+    font-weight: 300;
+    margin: 0 10px;
+}
+.payment-loading{
+    color:#999;
+    font-size: 22px;
+}
+
+.address{
+    overflow-wrap: break-word;
+    min-height: 30px;
+}
+
+.heading{
+    color: #2facd8;
+    display: inline-block;
+    border-bottom: 3px dashed #2facd8;
+    text-align: center;
+}
+.order-icon{
+    font-size: 20px;
+    float: left;
+}
+.order-list{
+    list-style: none;
+    padding: 4px 4px;
+}
+/*@media (min-width: 1025px){
+    .order-list{
+        margin: 0 25px;
+    }
+}*/
+.order-list li span{
+    padding: 16px 4px;
+    display: inline-block;
+}
+.order-list li{
+    border-top: 1px solid #c0c0c0;
+    display: inline-block;
+    font-size: 17px;
+    width: 100%;
+}
+.order-list li .order-ago{
+    float: right;
+    width: 128px;
+}
+
+.order-list li .order-ago{
+    background-color: #f0f0f0;
+    color: #253852;
+    /*padding: 16px 12px 11px 7px !important;*/
+}
+.order-list li span:nth-child(2), .order-list li span:nth-child(2) b{
+    /*font-family: Roboto-Thin;*/
+    color: #253852;
+}
+.order-list li span:nth-child(2) b{
+    /*font-family: Roboto-Light;*/
+    color: #253852;
+}
+.btn-submit{
+    position: absolute;
+    margin: -36px 35%;
+}
+.form-last-options{
+    margin-bottom: 30px;
+}
+
+.order-form-submit{
+    border: none;
+    width: 318px;
+    height: 81px;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    margin-left: -148px;
+    margin-top: -41px;
+    /*background: url(../img/btn-bg.png);*/
+    background-repeat: no-repeat;
+    background-size: 318px;
+}
+.submit-text{
+    position: absolute;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                          supported by Chrome and Opera */
+
+}
+.submit-area{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+.submit-area:hover{
+    cursor: pointer;
+}
+.submit-area:hover .submit-text{
+    text-shadow: 0px 3px 2px rgba(1,0,0,0.6);	
+}
+.submit-area:active .order-form-submit{
+    filter: drop-shadow(5px 5px 5px #734c12);
+}
+.table-borderless tbody tr td,.table-borderless tbody tr th,.table-borderless tr td,.table-borderless tr th,.table-borderless thead tr td,.table-borderless thead tr th{
+    border: none;
+}
+.text-right{
+    text-align: right;
+}
+
+.part-heading{
+    margin-bottom: 40px;
+}
+
+.footer{
+    background-color: #112239;
+    color: white;
+    min-height: 50px;
+    padding: 20px 0 10px 0;
+    position: relative;
+}
+.footer p{
+    font-size: 22px;
+    padding: 7px;
+}
+.piramid-btn{
+    width: 47px;
+    height: 40px;
+    bottom: 5px;
+    right: 0;
+    position: fixed;
+    border-bottom: 50px solid #253852;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: none;
+}
+/*.piramid-btn i{
+    margin-top: 20px;
+    color: #FFFFFF;
+    margin-left: -7px;
+    font-size: 18px;
+}*/
+.piramid-btn span{
+    position: absolute;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    left: -11px;
+    top: 17px;
+    font-size: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.piramid-btn:hover {
+    cursor: pointer;
+}
+.piramid-btn:hover span {
+    top: 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.piramid-btn:active i{
+    font-weight: bold;
+    text-shadow: 0px -2px #000000;
+}
+.title-head{
+    text-align: center;
+    padding: 0px 70px;
+    margin-bottom: 50px;
+}
+/*body{
+    font-family: sans-serif;
+}*/
+.container-body{
+    min-height: calc(100vh - 195px);
+}
+.contact .links{
+    margin: 10px 0;
+}
+.currency-items-wrapper{
+    width: 10000px;
+}
+
+.copied{
+    background: whitesmoke;
+    width: 167px;
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: -1px 1px 1px 1px grey;
+    display: none;
+}

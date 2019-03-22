@@ -1,0 +1,62 @@
+.Register-form {
+    width: 38%;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+    border: 1px solid #04b707;
+  }
+  .Register-form h1 {
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 24px;
+    padding: 20px 0 20px 0;
+  }
+  .form-group
+  {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .Register-form input[type="password"],
+  .Register-form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    margin-bottom: 5px;
+    margin:auto;
+    box-sizing:border-box;
+  }
+  .errorMsg
+  {
+    color: red;
+    margin-left: 10%;
+  }
+  .Register-form input[type="submit"] {
+    width: 80%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #fff;
+    padding: 1em 2em;
+    background-image: linear-gradient(#1d90cb,#0e86c4);
+    border-color: #137dba;
+    font-size: 11px;
+    text-transform: uppercase;
+    height: 42px;
+    letter-spacing: .05em;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+
+  }
+  .account-extras
+  {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  /* .form-group #registerCaptcha
+  {
+    text-align: center;
+    padding: 30px 0 0;
+
+  } */

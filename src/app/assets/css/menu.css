@@ -1,0 +1,13 @@
+.ui.menu
+{
+    background-color: #555!important;
+}
+.ui.menu.right
+{
+    margin-left: 40%;
+}
+
+.ui.menu .item
+{
+    color: rgb(241, 238, 238);
+}

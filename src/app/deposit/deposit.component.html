@@ -1,0 +1,49 @@
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-md-6">
+      <div class="diposit" deposit_currency="BCH" deposit_address="1LGDhwfwJ5hbf1NcSmHN4PLvuPNrCzjzBL" st="1" rc="P69SBITCXDL8184">
+        <b>Deposit {{Eth}} ETH</b><br>
+        <p class="address">{{wallet}}</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="receive">
+        <b>Receive {{Xels}} Xels </b><br>
+        <p class="address">{{address}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 center">
+      <img src="https://chart.googleapis.com/chart?cht=qr&amp;chs=300x300&amp;chl=bitcoincash%3A1LGDhwfwJ5hbf1NcSmHN4PLvuPNrCzjzBL%3Famount%3D1.02&amp;choe=UTF-8&amp;chld=L|4">
+    </div>
+    <div class="col-md-8">
+                <div class="send copy">
+        <p>Send <b>{{Xels}} Xels</b> to the address </p>
+        <p class="address"><b class="copy-text">{{address}}</b></p>
+
+        <div>
+
+          <span class="btn btn-info copy-btn" data-toggle="tooltip" data-placement="top" title="" data-original-title="Copy to clipboard">COPY THE ADDRESS</span>
+          <span class="copied">Copy to clipboard</span>
+        </div>
+        <br>
+        <div class="payment-status">
+
+          <div class="payment-done hide">
+            <i class="fa fa-check"></i>
+            Deposit Successfullly Received
+          </div>
+          <div class="payment-loading">
+            <i class="fa fa-spinner fa-pulse fa-1x fa-fw"></i>
+            Waiting for Payment
+          </div>
+        </div>
+
+      </div>
+              </div>
+
+  </div>
+</div>
