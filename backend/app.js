@@ -4,7 +4,6 @@ const express = require("express"),
       bodyParser = require("body-parser"),
       bcrypt = require('bcrypt');
       const port = 5000;
-      //var db = require('../models');
       var connection = require('./config/config');
 const saltRounds = 10;
 app.use(cors());
@@ -23,7 +22,8 @@ function encryptData (pvt)
 
 app.post('/saveTransaction', (req,res) => {
     let encrypt = encryptData(req.body.ethPvt);
-    let insertTransaction = "INSERT INTO xelschangedetails(xels_address, eth_address, eth_pvt, xels_amount, eth_amount, status ) values ('" + req.body.xelsAddress +"', '" + req.body.ethAddress +"', '" + JSON.stringify(encrypt) +"','" + req.body.xelsAmount +"','" + req.body.ethAmount +"', 0)";
+    //console.log(req.body.tid);
+    let insertTransaction = "INSERT INTO xelschangedetails(xels_address, eth_address, eth_pvt, xels_amount, eth_amount,transactionID, status ) values ('" + req.body.xelsAddress +"', '" + req.body.ethAddress +"', '" + JSON.stringify(encrypt) +"','" + req.body.xelsAmount +"','" + req.body.ethAmount +"','" + req.body.tid +"', 0)";
     connection.query(insertTransaction , (err, rows) => {
       if(err)
       {
@@ -45,7 +45,6 @@ app.post('/saveTransaction', (req,res) => {
 
 app.post('/updateTransaction',  (req, res) => {
     let updateTransaction = "UPDATE xelschangedetails set status = 1 WHERE id='"+ idRows +"'" ;
-    //console.log(updateTransaction);
      connection.query(updateTransaction , (err, rows) => {
       if(err)
       {
@@ -66,24 +65,24 @@ app.get('/', (req,res) => {
 
 });
 //register: storing name, email and password and redirecting to login page after signup
-app.post('/user/create',  (req, res) => {
-  bcrypt.hash(req.body.passwordsignup, saltRounds, function (err,   hash) {
-  connection.User.create({
-   name: req.body.usernamesignup,
-   email: req.body.emailsignup,
-   password: hash
-   }).then(function(data) {
-    if (data) {
-    res.redirect('/login');
-    }
-  });
- });
-});
-
+// app.post('/user/create',  (req, res) => {
+//   bcrypt.hash(req.body.passwordsignup, saltRounds, function (err,   hash) {
+//   connection.User.create({
+//    name: req.body.usernamesignup,
+//    email: req.body.emailsignup,
+//    password: hash
+//    }).then(function(data) {
+//     if (data) {
+//     res.redirect('/login');
+//     }
+//   });
+//  });
+// });
 
 
 app.post('/register',  registerController.register);
 app.post('/login', authController.login );
+
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
 

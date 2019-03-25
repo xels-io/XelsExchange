@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,  HttpHeaders , HttpParams , HttpErrorResponse } from '@angular/common/http';
+import { HttpClient,  HttpParams , HttpErrorResponse } from '@angular/common/http';
 import { Observable, throwError} from 'rxjs';
 import { environment } from '../../environments/environment';
 import * as socketIo from 'socket.io-client';
-import { catchError} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { SendCoinBuilding } from './models/xchange';
 import { FeeEstimation } from './models/FeeEstimate';
 @Injectable({
   providedIn: 'root'
@@ -54,14 +52,14 @@ export class XelsService {
       .set('recipients[0][destinationAddress]', data.recipients[0].destinationAddress)
       .set('recipients[0][amount]', data.recipients[0].amount)
       .set('feeType', data.feeType)
-      .set('allowUnconfirmed', "true");
+      .set('allowUnconfirmed', 'true');
       return this.http.get<any>(this.GetApiURL, {params: params});
   }
    /**
    * Build a transaction
    */
   buildTransaction(data: any): Observable<any> {
-    console.log(data);
+    // console.log(data);
     const pram = {
       URL : '/api/wallet/build-transaction',
       walletName : data.walletName,
@@ -77,10 +75,6 @@ export class XelsService {
     }
     return this.http.post(this.PostApiURL, pram);
   }
-  // //save
-  // saveTrans (data: any): Observable<any> {
-  //   return this.http.post(this.PostApiURL, prm);
-  // }
     /**
    * Send transaction
    */
@@ -88,22 +82,21 @@ export class XelsService {
     const prm = {
       URL: '/api/wallet/send-transaction',
       hex: data.hex
-    }
-   //console.log(data);
+    };
+   // console.log(data);
     return this.http.post(this.PostApiURL, prm);
   }
 
   private handleHttpError(error: HttpErrorResponse, silent?: boolean) {
     if (error.status === 0) {
-      if(!silent) {
+      if (!silent) {
        // this.modalService.openModal(null, null);
         this.router.navigate(['app']);
       }
     } else if (error.status >= 400) {
       if (!error.error.errors[0].message) {
         console.log(error);
-      }
-      else {
+      } else {
        // this.modalService.openModal(null, error.error.errors[0].message);
       }
     }
